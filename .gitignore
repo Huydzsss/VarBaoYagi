@@ -1,4 +1,24 @@
-node_modules/*
-# varSaoKe.csv
-# varSaoKe.json
-# varSaoKe.pdf
+# Bỏ qua thư mục node_modules
+node_modules/
+
+# Bỏ qua các tệp dữ liệu
+varSaoKe.csv
+varSaoKe.json
+varSaoKe.pdf
+
+# Bỏ qua các tệp build hoặc tạm thời
+*.log
+*.tmp
+*.swp
+*.DS_Store
+
+# Bỏ qua các tệp cấu hình IDE hoặc editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Bỏ qua các tệp môi trường và cấu hình nhạy cảm
+.env
+.env.local
+.env.*.local
