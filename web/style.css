@@ -1,0 +1,61 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: auto;
+    max-width: 1248px;
+    min-height: 100vh;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#myTable {
+    width: 100%;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+#loading {
+    font-size: larger;
+    text-align: center;
+    width: 100%;
+    margin: 50px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+table.dataTable span.highlight {
+    background-color: #9cddf9;
+    border-radius: 0.28571429rem;
+}
+
+#sumary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#sumary table {
+    text-align: right;
+}
+
+canvas#chart {
+    height: 300px !important;
+}
+.loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 0.4em solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 0.4em solid #007bff;
+    animation: spin 0.6s linear infinite;
+}
