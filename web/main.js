@@ -143,7 +143,18 @@ async function main() {
     };
   });
   console.log(dataset);
-
+  const dataset1 = ranges.map((range) => {
+    const transactionsInRange = transactions.filter(
+      (t) => t.money >= range[0] && t.money < range[1]
+    );
+    const totalMoney = transactionsInRange.reduce((acc, t) => acc + t.money, 0);
+  
+    return {
+      totalMoney: totalMoney,
+      name: shortenMoney(range[0]) + " - " + shortenMoney(range[1]),
+    };
+  });
+  console.log(dataset1);
   // render chart
   const canvas = document.createElement("canvas");
   canvas.id = "chart";
@@ -151,8 +162,14 @@ async function main() {
   const chart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: dataset.map((c) => c.name),
+      labels: dataset1.map((c) => c.name),
       datasets: [
+        {
+          label: "Tổng số tiền",
+          data: dataset1.map((c) => c.totalMoney),
+          backgroundColor: "rgba(255, 99, 132, 0.6)",
+          minBarLength: 2,
+        },
         {
           label: "Tổng giao dịch",
           data: dataset.map((c) => c.count),
