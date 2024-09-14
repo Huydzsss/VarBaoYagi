@@ -13,7 +13,7 @@ window.onload = () => {
 async function main() {
   // fetch data
   const data = await getBlobFromUrlWithProgress(
-    "../output/varSaoKe.csv",
+    "./output/varSaoKe.csv",
     (progress) => {
       loadingDiv.innerHTML = `Đang tải dữ liêu... ${formatSize(
         progress.loaded
