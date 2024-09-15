@@ -107,11 +107,11 @@ async function main() {
   sumaryDiv.innerHTML =
     "<table>" +
     [
-      ["Giao dịch", formatNumber(transactions.length)],
-      ["Tổng tiền", formatMoney(total)],
-      ["Trung bình", formatMoney(avg)],
-      ["Cao nhất", formatMoney(max)],
-      ["Thấp nhất", formatMoney(min)],
+      ["Giao dịch: ", formatNumber(transactions.length)],
+      ["Tổng tiền: ", formatMoney(total)],
+      ["Trung bình: ", formatMoney(avg)],
+      ["Cao nhất: ", formatMoney(max)],
+      ["Thấp nhất: ", formatMoney(min)],
     ]
       .map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`)
       .join("") +
